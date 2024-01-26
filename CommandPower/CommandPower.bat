@@ -94,7 +94,6 @@ if /i "%input%"=="$ARTIK" goto artik
 if /i "%input%"=="setings" goto setings
 if /i "%input%"=="@@@" goto setings
 if /i "%input%"=="chgu" goto chgu
-if /i "%input%"=="delfol" goto delfol
 goto error
 
 :error
@@ -303,10 +302,4 @@ goto home
 set /p user_name="Enter New UserName: "
 echo %user_name%> "c:\CommandPower\user\user.txt"
 cls
-goto home
-
-:delfol
-set /p del="Enter Folder: "
-rmdir /s /q "%cd%\%del%"
-echo Folder deleted: "%cd%\%del%"
 goto home
