@@ -94,6 +94,8 @@ if /i "%input%"=="$ARTIK" goto artik
 if /i "%input%"=="setings" goto setings
 if /i "%input%"=="@@@" goto setings
 if /i "%input%"=="chgu" goto chgu
+if /i "%input%"=="help" goto help
+if /i "%input%"=="?" goto help
 goto error
 
 :error
@@ -302,4 +304,36 @@ goto home
 set /p user_name="Enter New UserName: "
 echo %user_name%> "c:\CommandPower\user\user.txt"
 cls
+goto home
+
+:help
+echo exit
+echo say:#something you want#
+echo start:#something you want to open#
+echo calc:#something you want to calculate#
+echo stop:#something you want to stop#
+echo clrscr
+echo ipid
+echo mkfolder
+echo mkfolder/open
+echo delfolder
+echo mkfile
+echo mkfile/open
+echo delfile
+echo pause
+echo networks
+echo networks\all
+echo networks\sec
+echo ctc
+echo msg
+echo clock
+echo cfsm
+echo "cp" or "$"
+echo "gthome" or "$home"
+echo opnhome
+echo extdrv
+echo alld
+echo "setings" or "@@@"
+echo chgu
+echo "help" or "?"
 goto home
