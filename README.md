@@ -20,4 +20,4 @@ Desktop Requirement: Keep the CommandPower folder and its contents, including th
 Booting Process:
 You need to click on CP.bat file.
 
-v1.0.1
+v1.0.3
