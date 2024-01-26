@@ -91,8 +91,8 @@ if /i "%input%"=="opnhome" goto opnhome
 if /i "%input%"=="extdrv" goto extdrv
 if /i "%input%"=="alld" goto alld
 if /i "%input%"=="$ARTIK" goto artik
-if /i "%input%"=="setings" goto setings
-if /i "%input%"=="@@@" goto setings
+if /i "%input%"=="settings" goto settings
+if /i "%input%"=="@@@" goto settings
 if /i "%input%"=="chgu" goto chgu
 if /i "%input%"=="help" goto help
 if /i "%input%"=="?" goto help
@@ -270,24 +270,24 @@ for /f "usebackq delims=" %%a in ("c:\CommandPower\SecSys32\CommandsLock\Command
 )
 goto error
 
-:setings
+:settings
 cls
-echo Choose Seting
+echo Choose Setting
 echo 0.Exit
 echo 1.User
 echo 2.Home
-set /p "sc=What Seting: "
-if /i "%sc%"=="exit" goto exit/setings
-if /i "%sc%"=="0" goto exit/setings
-if /i "%sc%"=="1" goto setings/user
-if /i "%sc%"=="2" goto setings/home
-goto setings
+set /p "sc=What Setting: "
+if /i "%sc%"=="exit" goto exit/settings
+if /i "%sc%"=="0" goto exit/settings
+if /i "%sc%"=="1" goto settings/user
+if /i "%sc%"=="2" goto settings/home
+goto settings
 
-:exit/setings
+:exit/settings
 cls
 goto home
 
-:setings/user
+:settings/user
 echo %user_name%
 pause
 cls
@@ -300,6 +300,12 @@ pause
 cls
 goto home
 
+:setings/version
+echo 1.0.2
+pause
+cls
+goto home
+
 :chgu
 set /p user_name="Enter New UserName: "
 echo %user_name%> "c:\CommandPower\user\user.txt"
@@ -307,33 +313,34 @@ cls
 goto home
 
 :help
-echo exit
-echo say:#something you want#
-echo start:#something you want to open#
-echo calc:#something you want to calculate#
-echo stop:#something you want to stop#
-echo clrscr
-echo ipid
-echo mkfolder
-echo mkfolder/open
-echo delfolder
-echo mkfile
-echo mkfile/open
-echo delfile
-echo pause
-echo networks
-echo networks\all
-echo networks\sec
-echo ctc
-echo msg
-echo clock
-echo cfsm
-echo "cp" or "$"
-echo "gthome" or "$home"
-echo opnhome
-echo extdrv
-echo alld
-echo "setings" or "@@@"
-echo chgu
-echo "help" or "?"
+echo exit (It Will Exit The Program)
+echo say:#something you want# (It Will Print Things To The Screen)
+echo start:#something you want to open# (It Will Open Any App That You Want)
+echo calc:#something you want to calculate# (It Will Calculate Things)
+echo stop:#something you want to stop# (It Will Stop Any App That You Want)
+echo app:#CP App Store Apps# (It Will Open Any CP App Store Apps)
+echo clrscr (It Will Clear The Screen)
+echo ipid (It Will Show The Ip Stuff)
+echo mkfolder (Makes Folder In The The Zone You Are)
+echo mkfolder/open (Makes Folder And Opens It In The The Zone You Are)
+echo delfolder (It Will Delete A Folder  In The The Zone You Are)
+echo mkfile (Makes File In The The Zone You Are)
+echo mkfile/open (Makes File And Opens It In The The Zone You Are)
+echo delfile (It Will Delete A File  In The The Zone You Are)
+echo pause (It Will Pause The CommandPower)
+echo networks (It Will Show The Available Networks In The Aria)
+echo networks\all (It Will Show All The Networks You Have Been Connected)
+echo networks\sec (It Will Show The Things About A Network)
+echo ctc (Change Text Color)
+echo msg (It Sends A Message To A Network)
+echo clock (It Opens The Clock App)
+echo cfsm (Change Full Screen Mode)
+echo "cp" or "$" (Change Path)
+echo "gthome" or "$home" (Goes To Home)
+echo opnhome (Opens Home)
+echo extdrv (It Can Connect To A External Drive)
+echo alld (Shows The Files And Folders In A Folder Or Drive)
+echo "settings" or "@@@" (It Goes To Settings)
+echo chgu (Change User)
+echo "help" or "?" (It Helps A Lot)
 goto home
