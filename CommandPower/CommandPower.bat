@@ -301,7 +301,7 @@ cls
 goto home
 
 :setings/version
-echo 1.0.2
+echo CommandPower 1.0.2
 pause
 cls
 goto home
