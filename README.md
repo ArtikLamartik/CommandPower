@@ -15,5 +15,9 @@ Pull Requests: Submit your .bat file through pull requests.
 Include Information: Clearly mention the purpose and functionality of your app in the pull request.
 
 Note:
-Desktop Requirement: Keep the CommandPower folder and its contents, including the .bat file, on your desktop.
+Desktop Requirement: Keep the CommandPower folder and its contents, including the CP.bat file, on your desktop.
+
+Booting Process:
+You need to click on CP.bat file.
+
 v1.0.0
