@@ -56,6 +56,7 @@ cls
 goto home
 
 :home
+set ATHOS=CommandPower 1.0.3
 set input=Nothing
 set title=not set
 set message=not set
@@ -264,7 +265,8 @@ goto home
 :artik
 for /f "usebackq delims=" %%a in ("c:\CommandPower\SecSys32\CommandsLock\CommandLock1.txt") do (
     if /i "%user_name%"=="%%a" (
-        echo Hello, ARTIK
+        echo %os%
+        echo %ATHOS%
         goto home
     )
 )
@@ -276,11 +278,13 @@ echo Choose Setting
 echo 0.Exit
 echo 1.User
 echo 2.Home
+echo 3.Version
 set /p "sc=What Setting: "
 if /i "%sc%"=="exit" goto exit/settings
 if /i "%sc%"=="0" goto exit/settings
 if /i "%sc%"=="1" goto settings/user
 if /i "%sc%"=="2" goto settings/home
+if /i "%sc%"=="3" goto settings/version
 goto settings
 
 :exit/settings
@@ -301,7 +305,7 @@ cls
 goto home
 
 :setings/version
-echo CommandPower 1.0.2
+echo %ATHOS%
 pause
 cls
 goto home
