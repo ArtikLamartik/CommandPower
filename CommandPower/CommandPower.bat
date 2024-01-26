@@ -265,7 +265,6 @@ goto home
 :artik
 for /f "usebackq delims=" %%a in ("c:\CommandPower\SecSys32\CommandsLock\CommandLock1.txt") do (
     if /i "%user_name%"=="%%a" (
-        echo %os%
         echo %ATHOS%
         goto home
     )
@@ -297,14 +296,14 @@ pause
 cls
 goto home
 
-:setings/home
+:settings/home
 echo Location Of Home Is "c:\CommandPower\home"
 cd /d "c:\CommandPower\home"
 pause
 cls
 goto home
 
-:setings/version
+:settings/version
 echo %ATHOS%
 pause
 cls
