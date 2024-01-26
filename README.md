@@ -1,4 +1,31 @@
-You Can Make Pull Requests To Add To The App Folder, AKA The App Store Of CommandPower, But It Needs To Be A .bat File, And If You Have An .exe App Or Something Else You Can Put It In The LIB Folder And Make A .bat File In The APPS Folder That Opens The File, The Location Of The Apps Is "c:CommandPower\Sys32\APPS", That You Put The .bat File, And The Location That You Put Youre App Is "c:CommandPower\Sys32\LIB".
-You Don't Need To Download "OneNote Table Of Contents.onetoc2".
-The Folder And The File Needs To Be On The Desktop At All Time, But The App Will Auto Install In The "C:\CommandPower"
-V1.0.0
+
+## Contributing Applications
+
+1. **Add .bat Files to APPS:**
+   - Create a new .bat file in the `C:\CommandPower\Sys32\APPS` directory for your application.
+   - The .bat file in APPS should call the corresponding executable in the LIB folder.
+
+2. **Place Executables in LIB:**
+   - Put your application's executable or related files in the `C:\CommandPower\Sys32\LIB` directory.
+
+3. **Update YourApp.bat in APPS:**
+   - Edit the `YourApp.bat` file in APPS to reflect the correct paths and executable name.
+
+   ```batch
+   @echo off
+   setlocal
+
+   rem Change the path and executable name accordingly
+   set "LIB_PATH=C:\CommandPower\Sys32\LIB"
+   set "APP_EXECUTABLE=YourApp.exe"
+
+   rem Change to the LIB directory
+   pushd "%LIB_PATH%"
+
+   rem Run the application
+   start "" "%LIB_PATH%\%APP_EXECUTABLE%"
+
+   rem Return to the APPS directory
+   popd
+
+   endlocal
