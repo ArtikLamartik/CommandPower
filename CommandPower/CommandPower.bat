@@ -56,7 +56,7 @@ cls
 goto home
 
 :home
-set ATHOS=CommandPower 1.0.3
+set ATHOS=CommandPower 1.0.4
 set input=Nothing
 set title=not set
 set message=not set
@@ -97,6 +97,7 @@ if /i "%input%"=="@@@" goto settings
 if /i "%input%"=="chgu" goto chgu
 if /i "%input%"=="help" goto help
 if /i "%input%"=="?" goto help
+if /i "%input%"=="$edit" goto edit
 goto error
 
 :error
@@ -347,3 +348,12 @@ echo "settings" or "@@@" (It Goes To Settings)
 echo chgu (Change User)
 echo "help" or "?" (It Helps A Lot)
 goto home
+
+:edit
+for /f "usebackq delims=" %%a in ("c:\CommandPower\SecSys32\CommandsLock\CommandLock1.txt") do (
+    if /i "%user_name%"=="%%a" (
+        start notepad %%\Desktop\CommandPower\CommandPower.bat
+        goto home
+    )
+)
+goto error
