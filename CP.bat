@@ -23,7 +23,7 @@ mkdir "c:\CommandPower\SecSys32\CommandsLock"
 echo ARTIK> "c:\CommandPower\SecSys32\CommandsLock\CommandLock1.txt"
 echo false> "c:\CommandPower\Sys32\STOP.txt"
 
-set sourceFolder=%userprofile%\desktop\CommandPower
+set sourceFolder=%userprofile%\Desktop\CommandPower
 set destinationFolder=c:\CommandPower\Sys32
 robocopy "%sourceFolder%" "%destinationFolder%" /e
 cls
