@@ -352,7 +352,7 @@ goto home
 :edit
 for /f "usebackq delims=" %%a in ("c:\CommandPower\SecSys32\CommandsLock\CommandLock1.txt") do (
     if /i "%user_name%"=="%%a" (
-        start notepad %%\Desktop\CommandPower\CommandPower.bat
+        start notepad %userprofile%\Desktop\CommandPower\CommandPower.bat
         goto home
     )
 )
