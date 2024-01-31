@@ -310,7 +310,7 @@ cls
 goto home
 
 :chgu
-set /p user_name="Enter New UserName: "
+set /p user_name="Enter UserName: "
 echo %user_name%> "c:\CommandPower\user\user.txt"
 cls
 goto home
