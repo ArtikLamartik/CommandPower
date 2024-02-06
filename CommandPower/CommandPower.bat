@@ -95,8 +95,10 @@ if /i "%input%"=="settings" goto settings
 if /i "%input%"=="@@@" goto settings
 if /i "%input%"=="chgu" goto chgu
 if /i "%input%"=="help" goto help
-if /i "%input%"=="?" goto help
 if /i "%input%"=="$edit" goto edit
+if /i "%input%"=="shutc" goto shutc
+if /i "%input%"=="restc" goto restc
+if /i "%input%"=="?" goto help
 goto error
 
 :error
@@ -315,6 +317,12 @@ echo %user_name%> "c:\CommandPower\user\user.txt"
 cls
 goto home
 
+:shutc
+shutdown /s /f /t 0
+
+:restc
+shutdown /r /f /t 0
+
 :help
 echo exit (It Will Exit The Program)
 echo say:#something you want# (It Will Print Things To The Screen)
@@ -345,6 +353,7 @@ echo extdrv (It Can Connect To A External Drive)
 echo alld (Shows The Files And Folders In A Folder Or Drive)
 echo "settings" or "@@@" (It Goes To Settings)
 echo chgu (Change User)
+echo shutc (It Will Shutdown The Computer)
 echo "help" or "?" (It Helps A Lot)
 goto home
 
