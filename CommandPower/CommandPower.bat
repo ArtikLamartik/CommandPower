@@ -55,7 +55,7 @@ cls
 goto home
 
 :home
-set ATHOS=CommandPower 1.0.5
+set ATHOS=CommandPower 1.0.7
 set input=Nothing
 set title=not set
 set message=not set
@@ -354,6 +354,7 @@ echo alld (Shows The Files And Folders In A Folder Or Drive)
 echo "settings" or "@@@" (It Goes To Settings)
 echo chgu (Change User)
 echo shutc (It Will Shutdown The Computer)
+echo restc (It Will Restart The Computer)
 echo "help" or "?" (It Helps A Lot)
 goto home
 
