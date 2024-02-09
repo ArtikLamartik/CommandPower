@@ -55,7 +55,7 @@ cls
 goto home
 
 :home
-set ATHOS=CommandPower 1.0.7
+set ATHOS=CommandPower 1.0.8
 set input=Nothing
 set title=not set
 set message=not set
@@ -88,7 +88,6 @@ if /i "%input%"=="$" goto cp
 if /i "%input%"=="gthome" goto gthome
 if /i "%input%"=="$home" goto gthome
 if /i "%input%"=="opnhome" goto opnhome
-if /i "%input%"=="extdrv" goto extdrv
 if /i "%input%"=="alld" goto alld
 if /i "%input%"=="$ARTIK" goto artik
 if /i "%input%"=="settings" goto settings
@@ -319,9 +318,11 @@ goto home
 
 :shutc
 shutdown /s /f /t 0
+goto home
 
 :restc
 shutdown /r /f /t 0
+goto home
 
 :help
 echo exit (It Will Exit The Program)
@@ -349,7 +350,6 @@ echo cfsm (Change Full Screen Mode)
 echo "cp" or "$" (Change Path)
 echo "gthome" or "$home" (Goes To Home)
 echo opnhome (Opens Home)
-echo extdrv (It Can Connect To A External Drive)
 echo alld (Shows The Files And Folders In A Folder Or Drive)
 echo "settings" or "@@@" (It Goes To Settings)
 echo chgu (Change User)
