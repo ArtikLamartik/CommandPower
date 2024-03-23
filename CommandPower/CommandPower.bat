@@ -1,5 +1,19 @@
 @echo off
 
+cd /d "%~dp0" && ( if exist "%temp%\getadmin.vbs" del "%temp%\getadmin.vbs" ) && fsutil dirty query %systemdrive% 1>nul 2>nul || (  cmd /u /c echo Set UAC = CreateObject^("Shell.Application"^) : UAC.ShellExecute "cmd.exe", "/k cd ""%~sdp0"" && ""%~s0"" %Apply%", "", "runas", 1 >> "%temp%\getadmin.vbs" && "%temp%\getadmin.vbs" && exit /B )
+call :isAdmin
+if %errorlevel% == 0 (
+    goto start
+) else (
+    echo.
+)
+
+:isAdmin
+fsutil dirty query %systemdrive% >nul
+exit /b %errorlevel%
+
+:start
+
 title CommandPower
 
 setlocal EnableDelayedExpansion
@@ -55,7 +69,7 @@ cls
 goto home
 
 :home
-set ATHOS=CommandPower 1.0.0
+set ATHOS=CommandPower 1.0.1
 set input=Nothing
 set title=not set
 set message=not set
