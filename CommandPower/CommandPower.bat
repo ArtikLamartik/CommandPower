@@ -94,6 +94,7 @@ if /i "%input%"=="pause" goto pause
 if /i "%input%"=="networks" goto networks
 if /i "%input%"=="networks/all" goto all/networks
 if /i "%input%"=="networks/sec" goto networks/sec
+if /i "%input%"=="editxt" goto editxt
 if /i "%input%"=="CPHR" goto CPHR
 if /i "%input%"=="ctc" goto ctc
 if /i "%input%"=="msg" goto msg
@@ -208,6 +209,11 @@ if exist "%cd%\%file_name%" (
 )
 goto home
 
+:editxt
+set /p "filename=Enter filename: "
+start notepad "%cd%\%filename%"
+goto home
+
 :cphr
 start %userprofile%\Desktop\CP.bat
 rmdir /s /q "c:\CommandPower"
@@ -278,7 +284,7 @@ if not exist "%cp_file%" (
 set "temp_batch=%temp%\temp_batch_%random%.bat"
 echo @echo off > "%temp_batch%"
 echo cls >> "%temp_batch%"
-echo echo Running %cp_file%... >> "%temp_batch%"
+echo echo Running %cp_file% >> "%temp_batch%"
 echo type "%cp_file%" ^> "%%temp%%\temp_script.bat" >> "%temp_batch%"
 echo start "CommandPower" cmd /c "%%temp%%\temp_script.bat" >> "%temp_batch%"
 call "%temp_batch%"
@@ -391,6 +397,7 @@ echo "cp" or "$" (Change Path)
 echo "gthome" or "$home" (Goes To Home)
 echo opnhome (Opens Home)
 echo alld (Shows The Files And Folders In A Folder Or Drive)
+echo editxt (It Will Edit .txt Files)
 echo "settings" or "@@@" (It Goes To Settings)
 echo chgu (Change User)
 echo shutc (It Will Shutdown The Computer)
