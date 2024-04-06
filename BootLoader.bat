@@ -3,7 +3,7 @@ cls
 ping localhost -n 3 >nul
 
 :bootloader
-if exist "%userprofile%\desktop\CommandPower\CommandPower.cp" (
+if exist "%userprofile%\desktop\CommandPower\CommandPower.bat" (
     goto restartcp
 ) else if exist "%userprofile%\desktop\WinBatchBox.cp" (
     goto bootwbb
@@ -39,7 +39,7 @@ cls
 goto bootcp
 
 :bootcp
-set "cp_file=c:\CommandPower\Sys32\CommandPower.cp"
+set "cp_file=c:\CommandPower\Sys32\CommandPower.bat"
 if not exist "%cp_file%" (
     echo Error: %cp_file% not found.
     goto home
