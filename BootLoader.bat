@@ -54,14 +54,7 @@ if /i "%inp%"=="2" goto bootcp_winbatchbox
 goto home
 
 :bootcp_commandpower
-set "temp_batch=%temp%\temp_batch_%random%.bat"
-echo @echo off > "%temp_batch%"
-echo cls >> "%temp_batch%"
-echo echo Running %cp_file% >> "%temp_batch%"
-echo type "%cp_file%" ^> "%%temp%%\temp_script.bat" >> "%temp_batch%"
-echo start "CommandPower" cmd /c "%%temp%%\temp_script.bat" >> "%temp_batch%"
-call "%temp_batch%"
-del "%temp_batch%"
+start "c:\CommandPower\CommandPower.bat"
 exit
 
 :bootcp_winbatchbox
