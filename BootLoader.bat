@@ -54,7 +54,7 @@ if /i "%inp%"=="2" goto bootcp_winbatchbox
 goto home
 
 :bootcp_commandpower
-start "c:\CommandPower\CommandPower.bat"
+start "CommandPower" "c:\CommandPower\Sys32\CommandPower.bat"
 exit
 
 :bootcp_winbatchbox
