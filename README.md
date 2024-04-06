@@ -15,9 +15,11 @@ Pull Requests: Submit your .cp file through pull requests.
 Include Information: Clearly mention the purpose and functionality of your app in the pull request.
 
 Note:
-Desktop Requirement: Keep the CommandPower folder and its contents, including the CP.bat file, on your desktop.
+Desktop Requirement: Keep the CommandPower folder and its contents, including the BootLoader.bat file, on your desktop.
 
 Booting Process:
-You need to click on CP.bat file.
+You need to click on BootLoader.bat file.
 
-v1.0.2
+With WinBatchBox
+
+v1.0.3
