@@ -22,4 +22,4 @@ You need to click on BootLoader.bat file.
 
 With WinBatchBox
 
-v1.0.6
+v1.0.7
