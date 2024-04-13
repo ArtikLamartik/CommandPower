@@ -24,7 +24,6 @@ goto startcp
 
 :startcp
 mkdir "c:\CommandPower"
-mkdir "c:\CommandPower\bin"
 mkdir "c:\CommandPower\user"
 mkdir "c:\CommandPower\home"
 mkdir "c:\CommandPower\Sys32"
