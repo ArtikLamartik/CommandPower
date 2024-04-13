@@ -69,7 +69,7 @@ cls
 goto home
 
 :home
-set ATHOS=CommandPower 1.0.7
+set ATHOS=CommandPower 1.0.8
 set input=Nothing
 set title=not set
 set message=not set
@@ -375,7 +375,7 @@ goto home
 :help
 echo exit (It Will Exit The Program)
 echo $say:#something you want# (It Will Print Things To The Screen)
-echo $start:#something you want to open# (It Will Open Any App That You Want)
+echo $open:#something you want to open# (It Will Open Any App That You Want)
 echo $calc:#something you want to calculate# (It Will Calculate Things)
 echo $stop:#something you want to stop# (It Will Stop Any App That You Want)
 echo $app:#CP App Store Apps# (It Will Open Any CP App Store Apps)
