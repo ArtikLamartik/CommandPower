@@ -20,6 +20,4 @@ Desktop Requirement: Keep the CommandPower folder and its contents, including th
 Booting Process:
 You need to click on BootLoader.bat file.
 
-With WinBatchBox
-
 v1.0.9
