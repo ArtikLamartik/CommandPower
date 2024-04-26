@@ -69,7 +69,7 @@ cls
 goto home
 
 :home
-set ATHOS=CommandPower 1.0.9
+set ATHOS=CommandPower 1.1.0
 set input=Nothing
 set title=not set
 set message=not set
