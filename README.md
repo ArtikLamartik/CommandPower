@@ -5,6 +5,7 @@ Thank you for contributing to the CommandPower App Store! Follow these guideline
 Submission Requirements:
 File Type: Submit only .cp files.
 Executable Files (.exe): If your app includes an executable (.exe) file or other formats, place them in the LIB folder (c:\CommandPower\Sys32\LIB). Create a .cp file in the APPS folder (c:\CommandPower\Sys32\APPS) that opens your app.
+And if you have to save a file, save it in the SAVE Folder (c:\CommandPower\Sys32\SAVE)
 
 App and File Locations:
 Apps Folder: c:\CommandPower\Sys32\APPS
